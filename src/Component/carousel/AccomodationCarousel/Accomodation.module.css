@@ -1,0 +1,17 @@
+.animation{
+  animation: auto_swipe 0.5s ease backwards;
+
+     
+}
+ @keyframes auto_swipe {
+  from {
+    opacity: 0;
+    transform: translateX(0rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(10rem);
+  }
+  
+}

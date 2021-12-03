@@ -1,0 +1,110 @@
+.AccomodationSlider{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    .row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        position: relative;
+        .col{
+            display: flex;
+            align-items: center;
+            img{
+                width: 60%;
+                // height: 20%;
+                
+            }
+        
+        }
+        .left{
+           justify-content: flex-start;
+        }
+        .right{
+            width: 40%;
+            justify-content: center;
+            position: absolute;
+            right: 15%;
+            background: color(lightmode);
+            .details{
+                width: 90%;
+                height: 300px;
+                display: flex;
+                position: relative;
+                z-index: 5;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    @include fontprop(22px,600,$heading);
+                    color: color(font);
+                }
+                span{
+                    @include fontprop(14px, 400, $body);
+                    text-align: center;
+                }
+                .underline{
+                    width: 100px;
+                    margin-bottom: 5%;
+                    border-bottom: 2px solid color(primary);
+                }
+                .btn-group{
+                    width: 80%;
+                    margin: 2% auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    button{
+                        margin: 2% 0;
+                        margin-left: 10%;
+                        padding: 3% 5%;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        @include fontprop(14px,500,$heading);
+                        transition: all 0.8s ease;
+                        &:hover{
+                            background: color(darkmode);
+                            color: color(lightmode);
+                        }
+                    }
+                }
+            }
+            .controll-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                button{
+                    width: 60px;
+                    height: 50px;
+                    border: none;
+                    background: transparent;
+                    z-index: 20;
+                    ion-icon{
+                        font-size: 26px;
+                        color: color(primary);
+                        background: transparent;
+                        z-index: 19;
+                    }
+                    &:hover{
+                        background: rgba(color(darkmode), 0.2);
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+
+
+    // background-color: blue;
+}

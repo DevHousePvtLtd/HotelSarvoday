@@ -1,0 +1,53 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    .slide {
+        position: relative;
+        min-width: 100%;
+        height: 100%;
+        transition: 500ms ease-in;
+        overflow: hidden;
+        
+      }
+
+      .slider-buttons {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5%;
+        height: 8vh;
+        background: none;
+        border: none;
+        outline: none;
+        transition: all 500ms ease-in;
+
+        ion-icon {
+            font-size: 2rem;
+            color: color(primary);
+          }
+          
+
+        &:hover {  
+            background: rgba(0, 0, 0, 0.3);
+        }
+      }
+      #goLeft {
+        left: 0;
+      }
+      
+      #goRight {
+        right: 0;
+      }
+      
+
+      
+  }

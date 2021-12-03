@@ -1,0 +1,289 @@
+@mixin fontprop($size,$weight,$family){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+.bookingContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    background: transparent;
+    z-index: 2;
+    margin-top: -39px;
+    margin-bottom: 50px;
+
+    .bookingHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 80%;
+        // height: 50px;
+        text-align: center;
+        background: color(lightmode);
+        .bookingButton{
+            display: flex;
+            width: 50%;
+            height: 20%;
+            align-items: center;
+            justify-content: center;
+            border: 1px none color(button2);
+            background: color(lightmode);
+            // padding: 2%;
+            p{
+                @include fontprop(14px, 600,$body);
+                text-transform: uppercase;
+                margin: 2%;
+                color: color(button1);
+            }
+            &:hover{
+                background: color(accent);
+                p{
+                    color: color(lightmode);
+                }
+            }
+        }
+    }
+    .bookingBody{
+        background: color(lightmode);
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .formItem{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            margin-right: 20px;
+            @include fontprop(14px, 400 ,$body );
+            text-transform: uppercase;
+            .Data{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-around;
+                flex-direction: column;
+                width: 100%;
+                height: 80px;
+                
+                .Input{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    .picker-row{
+                        
+                        width: 90%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        svg{
+                            visibility: visible !important;
+                        }
+                        p{
+                            @include fontprop(12px, 400 ,$body );
+                            color: color(accent);
+                           
+                        }
+                        
+                    }
+                    ion-icon{
+                        width: 50px;
+                        height: 50px;
+                        color: color(primary);
+                        margin-left: 15px;
+                    }
+                    
+                    a {
+                    color: color(primary);
+                    text-decoration: none;
+                    transition: all .25s;
+                    }
+                    .calender{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        // background: #000;
+                        position: absolute;
+                        width: 30%;
+                        height: 30%;
+                        top: 60%;
+                        left: 11%;
+                        input{
+                            width: 90%;
+                            height: 30px;
+                            background: transparent;
+                            border: none;
+                            visibility: hidden;
+                            &:hover{
+                                outline: none;
+                            }
+                            &:focus-within{
+                                outline: none;
+                            }
+
+                        }
+                        
+                    }
+                    &:hover{
+                        .picker-row{
+                            visibility: hidden;
+                        }
+                        .calender{
+                            input{
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+
+                    .drop{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                        
+                        
+                        .title {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            height: 50px;
+                            box-sizing: border-box;
+                            border: none;
+                            @include fontprop(30px, 400 ,$heading );
+                            color: color(primary);
+                            option{
+                                font-size: 14px;
+                                color: color(primary);
+                                margin-bottom: 5px;
+                                text-align: center;
+                            }
+                        
+                        }
+
+                    }
+                    .dropdown{
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        .selector-text{
+                            position: absolute;
+                            background: transparent;
+                            width: 100%;
+                            top: -4px;
+                            visibility: visible;
+                            p{
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                @include fontprop(18px,400 ,$body );
+                                color: color(primary);
+                                
+                            }
+                            span{
+                                display: block;
+                                position: absolute;
+                                top: -10px;
+                                left: -25px;
+                                @include fontprop(50px,400 ,$body );
+                                color: color(primary);
+                            }
+                        }
+                        
+                        input{
+                            width: 80%;
+                            height: 50px;
+                            margin-top: 2px;
+                            outline: none;
+                            border: none;
+                            &::placeholder{
+                                @include fontprop(12px,400 ,$heading );
+                                color: color(primary);
+                            }
+                           
+                        }
+                        .dropdown-content{
+                            display: none;
+                            position: absolute;
+                            width: 200px;
+                            top: 50px;
+                            z-index: 10;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-direction: row;
+                            
+                            .title {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 50px;
+                                box-sizing: border-box;
+                                border: none;
+                                @include fontprop(20px, 400 ,$heading );
+                                color: color(primary);
+                                option{
+                                    font-size: 14px;
+                                    color: color(primary);
+                                    margin-bottom: 5px;
+                                    text-align: center;
+                                }
+                            
+                            }
+                            
+                        }
+                        &:hover{
+                           .dropdown-content{
+                               display: flex;
+                           } 
+                        }
+                        
+
+
+
+                    }
+
+                    
+                        
+                    
+                }
+            }
+
+            .submit{
+                width: 200px;
+                height:60px ;
+                padding: 5% 10%;
+                background: color(button1);
+                border: none;
+                @include fontprop(12px,600 ,$heading );
+                color: color(lightmode);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: 0.8s;
+                &:hover{
+                    background: color(primary);
+                }
+            }
+        }
+        .dateselect{
+            width: 350px;
+            margin-left: 20px;
+        }
+    }
+
+    // background-color: red;
+
+}

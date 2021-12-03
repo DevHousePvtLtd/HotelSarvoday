@@ -1,0 +1,152 @@
+@mixin fontprop($size,$weight,$family){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}
+.menuDisapper{
+    animation: menu-disappear 0.5s ease-out backwards;
+
+          @keyframes menu-disappear {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-30rem);
+  }
+  
+}
+}
+
+.menu{
+    display: flex;
+    width: 30%;
+    height: 100vh;
+    flex-direction: column;
+    background: color(lightmode);
+    color: color(font);
+    padding: 0 3%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: .5px 0 10px .5px color(accent); 
+
+    animation: menu-appear 0.5s ease-in-out forwards;
+      @keyframes menu-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+  
+}
+
+
+    .menuhead{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .closebtn{
+            display: flex;
+            margin: 3% 0;
+            font-size: 40px;
+        }
+        .menusearch{
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            
+            // border-radius: 5px;
+            border: 1px solid transparent;
+            background: transparent;
+            transition: 0.8s;
+            &:hover{
+                border: 1px solid color(accent);
+            }
+            .search{
+                width: 100%;
+                height: 40px;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: color(font);
+                margin:  0 10px;
+                @include fontprop(16px, 400 , $font );
+                &:active{
+                    background: transparent;
+                }
+                &::placeholder{
+                    color: color(font);
+                    background: transparent;
+                }
+            }
+            ion-icon{
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+
+     } // close button n search
+     .menubody{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+
+        .menulinks{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 2% 0;
+            color: color(font);
+            .menuitem{
+                display: flex;
+                flex-direction: column;
+                padding: 5px 0;
+                @include fontprop(18px ,400 , $font );
+                // transition: 0.8s;
+                &:hover{
+                    p{
+                        color: color(primary);
+                    }
+                    .dropdown{
+                        p{
+                            color: color(font);
+                            &:hover{
+                                color: color(primary);
+                            }
+                        }
+                        display: flex;
+                    }
+                    ion-icon{
+                        display: none;
+                    }
+                }
+                .itemtitle{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                }
+                .dropdown{
+                    display: none;
+                    transition: ease-in-out;
+                    flex-direction: column;
+                    padding-left: 5px;
+                    line-height: 30px;
+                }
+            }
+        }
+     }
+}

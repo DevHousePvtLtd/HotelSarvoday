@@ -1,0 +1,17 @@
+/* .animation{
+        animation: menu-disappear 0.5s ease-out backwards;
+
+     
+}
+ @keyframes menu-disappear {
+  from {
+    opacity: 0;
+    transform: translateX(-130rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(30rem);
+  }
+  
+} */

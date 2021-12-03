@@ -1,0 +1,92 @@
+
+@mixin fontprop($size,$weight,$family){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+  }
+  
+
+
+//For Carousel
+.roomCarousel {
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      width: 100%;
+      height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin: 10vmin 5vmin;
+        margin: 5vmin;
+        overflow: hidden;
+        transform: skew(5deg);
+      
+        .card {
+          flex: 1;
+          transition: all 1s ease-in-out;
+          height: 90vmin;
+          position: relative;
+          .card__head {
+            color: black;
+            background: color(primary);
+            padding: 0.5em;
+            transform: rotate(-90deg);
+            transform-origin: 0% 0%;
+            transition: all 0.5s ease-in-out;
+            min-width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            white-space: nowrap;
+            p{
+                @include fontprop(19px, 600 , $body );
+            }
+          }
+      
+          &:hover {
+            flex-grow: 10;
+            .image{
+              filter: grayscale(0);
+            }
+            .card__head {
+              text-align: center;
+              top: calc(100% - 2em);
+              color: white;
+              background: rgba(0, 0, 0, 0.5);
+              @include fontprop(2rem,500,$body);
+              transform: rotate(0deg) skew(-5deg);
+            }
+          }
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s ease-in-out;
+            filter: grayscale(100%);
+          }
+          &:not(:nth-child(5)) {
+            margin-right: 1em;
+          }
+        }
+      }
+  }
+  
+  .caption{
+    width: 80%;
+    margin: 20% 10%;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    color: color(font2);
+
+  }
+//Room Carousel End

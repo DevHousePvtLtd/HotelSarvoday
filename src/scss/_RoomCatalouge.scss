@@ -1,0 +1,54 @@
+::-webkit-scrollbar{
+    display: none;
+}
+.roomCatalouge{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(color(darkmode),0.8),rgba(color(darkmode),0.7));
+    position: fixed;
+    top: 0;
+    z-index: 999990;
+    &-content{
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        background: color(lightmode);
+        
+        overflow: auto;
+        &-header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .icon{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ion-icon{
+                    font-size: 20px;
+                    color: color(primary);
+                }
+            }
+            .title{
+                color: color(primary);
+                p{
+                    @include fontprop(18px,800,$heading);
+                }
+            }
+        }
+        &-body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .AccomodationSlider{
+                margin: 1% auto;
+            }
+        }
+    }
+    
+    
+    
+}

@@ -1,0 +1,144 @@
+
+.ReservationForm{
+    .booking{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .column{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin: 0 1%;
+
+            .form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                p{
+                    @include fontprop(18px,800,$heading);
+                    color: color(primary);
+                    width: 80%;
+                    margin: auto;
+                    margin-bottom: 3%;
+                    padding-bottom: 1%;
+                    border-bottom: 1px solid color(button2);
+                }
+                form{
+                    width: 100%;
+                }
+                .fields{
+                    width: 80%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    label{
+                        @include fontprop(14px,500,$body);
+                        color: color(font1);
+                        width: 100%;
+                        margin-top: 1%;
+                    }
+                    input[type=checkbox]{
+                        width: 20px;
+                        height: 20px;
+                        background: transparent;
+                        &:checked::before{
+                            background: color(primary);
+                        }
+                    }
+                    input,select{
+                        width: 100%;
+                        height: 5vh;
+                        margin-bottom: 2%;
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid ;
+                        border-color: rgba(color(button2), 0.3);
+                        cursor: pointer;
+                        @include fontprop(14px,400,$body);
+                        option{
+                            margin: 1% auto;
+                        }
+                        &:hover{
+                            box-shadow: 0 1px 0px 0.1px color(primary);
+                        }
+                        &:focus-within{
+                            border-color: rgba(color(button1), 1);
+                        }
+                    }
+                    
+                    button{
+                        border-radius: 0;
+                        margin: auto;
+                        margin-right: 0;
+                        margin-top: 2%;
+                        padding: 1vh 2vw;
+                        border: 1px solid color(button2);
+                        @include fontprop(18px,600,$heading)
+                    }
+
+                }
+                .check{
+                    height: 30px;
+                    flex-direction: row !important;
+                    align-items: center !important;
+                    justify-content: space-between;
+                    label{
+                        margin: auto;
+                        margin-left: 3%;
+                    }
+                }
+                .radio{
+                    span{
+                        @include fontprop(14px,400,$body);
+                        color: color(font1);
+                        width: 100%;
+                        margin-top: 1%;
+                    }
+                    &-buttons{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        flex-direction: row;
+                        .button{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 1% 2%;
+                            input[type=radio]{
+                                width: 20px;
+                                height: 20px;
+                            }
+                            label{
+                                margin-left: 2%;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
+            
+            
+            
+        }
+    }
+    
+}

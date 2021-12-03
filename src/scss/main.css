@@ -1,0 +1,2191 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Nunito+Sans&family=Poppins&display=swap");
+.menuDisapper {
+  -webkit-animation: menu-disappear 0.5s ease-out backwards;
+          animation: menu-disappear 0.5s ease-out backwards;
+}
+
+@-webkit-keyframes menu-disappear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
+  }
+}
+
+@keyframes menu-disappear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
+  }
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  color: #333;
+  padding: 0 3%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0.5px 0 10px 0.5px #4A4A4A;
+          box-shadow: 0.5px 0 10px 0.5px #4A4A4A;
+  -webkit-animation: menu-appear 0.5s ease-in-out forwards;
+          animation: menu-appear 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes menu-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+.menu .menuhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .menuhead .closebtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3% 0;
+  font-size: 40px;
+}
+
+.menu .menuhead .menusearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background: transparent;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.menu .menuhead .menusearch:hover {
+  border: 1px solid #4A4A4A;
+}
+
+.menu .menuhead .menusearch .search {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu .menuhead .menusearch .search:active {
+  background: transparent;
+}
+
+.menu .menuhead .menusearch .search::-webkit-input-placeholder {
+  color: #333;
+  background: transparent;
+}
+
+.menu .menuhead .menusearch .search:-ms-input-placeholder {
+  color: #333;
+  background: transparent;
+}
+
+.menu .menuhead .menusearch .search::-ms-input-placeholder {
+  color: #333;
+  background: transparent;
+}
+
+.menu .menuhead .menusearch .search::placeholder {
+  color: #333;
+  background: transparent;
+}
+
+.menu .menuhead .menusearch ion-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menu .menubody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+}
+
+.menu .menubody .menulinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 2% 0;
+  color: #333;
+}
+
+.menu .menubody .menulinks .menuitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu .menubody .menulinks .menuitem:hover p {
+  color: #8B7B55;
+}
+
+.menu .menubody .menulinks .menuitem:hover .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .menubody .menulinks .menuitem:hover .dropdown p {
+  color: #333;
+}
+
+.menu .menubody .menulinks .menuitem:hover .dropdown p:hover {
+  color: #8B7B55;
+}
+
+.menu .menubody .menulinks .menuitem:hover ion-icon {
+  display: none;
+}
+
+.menu .menubody .menulinks .menuitem .itemtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menubody .menulinks .menuitem .dropdown {
+  display: none;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+  padding: 0 20px;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+@-webkit-keyframes carousel {
+  0% {
+    left: 0;
+  }
+  11% {
+    left: 0;
+  }
+  12.5% {
+    left: -100%;
+  }
+  23.5% {
+    left: -100%;
+  }
+  25% {
+    left: -200%;
+  }
+  36% {
+    left: -200%;
+  }
+  37.5% {
+    left: -300%;
+  }
+  48.5% {
+    left: -300%;
+  }
+  50% {
+    left: -400%;
+  }
+  61% {
+    left: -400%;
+  }
+  62.5% {
+    left: -300%;
+  }
+  73.5% {
+    left: -300%;
+  }
+  75% {
+    left: -200%;
+  }
+  86% {
+    left: -200%;
+  }
+  87.5% {
+    left: -100%;
+  }
+  98.5% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes carousel {
+  0% {
+    left: 0;
+  }
+  11% {
+    left: 0;
+  }
+  12.5% {
+    left: -100%;
+  }
+  23.5% {
+    left: -100%;
+  }
+  25% {
+    left: -200%;
+  }
+  36% {
+    left: -200%;
+  }
+  37.5% {
+    left: -300%;
+  }
+  48.5% {
+    left: -300%;
+  }
+  50% {
+    left: -400%;
+  }
+  61% {
+    left: -400%;
+  }
+  62.5% {
+    left: -300%;
+  }
+  73.5% {
+    left: -300%;
+  }
+  75% {
+    left: -200%;
+  }
+  86% {
+    left: -200%;
+  }
+  87.5% {
+    left: -100%;
+  }
+  98.5% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes go {
+  0% {
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+@keyframes go {
+  0% {
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+@-webkit-keyframes back {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes back {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 1;
+  -webkit-box-shadow: inset 0 50px 90% rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 50px 90% rgba(0, 0, 0, 0.5);
+}
+
+.carousel .caption {
+  width: 95%;
+  height: 50%;
+  margin: auto;
+  padding: 15% 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #fff;
+}
+
+.carousel .caption h1 {
+  font-size: 50px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+.carousel .caption p {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Libre Franklin", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.carousel .caption ion-icon {
+  font-size: 80px;
+  --ionicon-stroke-width: 5px;
+  margin: 15px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.carousel .caption ion-icon:hover {
+  color: #8B7B55;
+}
+
+.carousel .paineis {
+  width: 500%;
+  overflow: hidden;
+  height: 100%;
+  -webkit-animation: carousel 30s infinite;
+          animation: carousel 30s infinite;
+  position: relative;
+}
+
+.carousel article {
+  float: left;
+  width: 20%;
+  background: #333;
+}
+
+.carousel article img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .banner .carousel {
+    height: 30%;
+  }
+  .banner .caption {
+    width: 80%;
+    height: 30%;
+    margin: 20% 10%;
+  }
+  .banner .caption h1 {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: .2rem;
+  }
+  .banner .caption p {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Libre Franklin", sans-serif;
+  }
+}
+
+.roomCarousel {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.roomCarousel .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5vmin;
+  overflow: hidden;
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
+}
+
+.roomCarousel .container .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  height: 90vmin;
+  position: relative;
+}
+
+.roomCarousel .container .card .card__head {
+  color: black;
+  background: #8B7B55;
+  padding: 0.5em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+.roomCarousel .container .card .card__head p {
+  font-size: 19px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.roomCarousel .container .card:hover {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+.roomCarousel .container .card:hover .image {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.roomCarousel .container .card:hover .card__head {
+  text-align: center;
+  top: calc(100% - 2em);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Libre Franklin", sans-serif;
+  -webkit-transform: rotate(0deg) skew(-5deg);
+          transform: rotate(0deg) skew(-5deg);
+}
+
+.roomCarousel .container .card .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.roomCarousel .container .card:not(:nth-child(5)) {
+  margin-right: 1em;
+}
+
+.caption {
+  width: 80%;
+  margin: 20% 10%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  background: transparent;
+}
+
+.video .video-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.video .video-item iframe {
+  width: 1280px;
+  height: 720px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.bookingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  z-index: 2;
+  margin-top: -39px;
+  margin-bottom: 50px;
+}
+
+.bookingContainer .bookingHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  text-align: center;
+  background: #fff;
+}
+
+.bookingContainer .bookingHeader .bookingButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px none #555;
+  background: #fff;
+}
+
+.bookingContainer .bookingHeader .bookingButton p {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  text-transform: uppercase;
+  margin: 2%;
+  color: #A69571;
+}
+
+.bookingContainer .bookingHeader .bookingButton:hover {
+  background: #4A4A4A;
+}
+
+.bookingContainer .bookingHeader .bookingButton:hover p {
+  color: #fff;
+}
+
+.bookingContainer .bookingBody {
+  background: #fff;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bookingContainer .bookingBody .formItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  text-transform: uppercase;
+}
+
+.bookingContainer .bookingBody .formItem .Data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 80px;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .picker-row {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .picker-row svg {
+  visibility: visible !important;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .picker-row p {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #4A4A4A;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input ion-icon {
+  width: 50px;
+  height: 50px;
+  color: #8B7B55;
+  margin-left: 15px;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input a {
+  color: #8B7B55;
+  text-decoration: none;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .calender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  top: 60%;
+  left: 11%;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .calender input {
+  width: 90%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  visibility: hidden;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .calender input:hover {
+  outline: none;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .calender input:focus-within {
+  outline: none;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input:hover .picker-row {
+  visibility: hidden;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input:hover .calender input {
+  visibility: visible;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .drop .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .drop .title option {
+  font-size: 14px;
+  color: #8B7B55;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .selector-text {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  top: -4px;
+  visibility: visible;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .selector-text p {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .selector-text span {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  font-size: 50px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown input {
+  width: 80%;
+  height: 50px;
+  margin-top: 2px;
+  outline: none;
+  border: none;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown input::-webkit-input-placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown input:-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown input::-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 50px;
+  z-index: 10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .dropdown-content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown .dropdown-content .title option {
+  font-size: 14px;
+  color: #8B7B55;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.bookingContainer .bookingBody .formItem .Data .Input .dropdown:hover .dropdown-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bookingContainer .bookingBody .formItem .submit {
+  width: 200px;
+  height: 60px;
+  padding: 5% 10%;
+  background: #A69571;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.bookingContainer .bookingBody .formItem .submit:hover {
+  background: #8B7B55;
+}
+
+.bookingContainer .bookingBody .dateselect {
+  width: 350px;
+  margin-left: 20px;
+}
+
+.text-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #fff;
+  width: 70%;
+  margin: 3% 0;
+}
+
+.text-carousel .text-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+}
+
+.text-carousel .text-title p {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  color: #333;
+}
+
+.text-carousel .text-body {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.text-carousel .text-body h4 {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  color: #333;
+  margin-bottom: 3%;
+}
+
+.text-carousel .text-body h6 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: rgba(51, 51, 51, 0.9);
+  margin-bottom: 3%;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slider .slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  -webkit-transition: 500ms ease-in;
+  transition: 500ms ease-in;
+  overflow: hidden;
+}
+
+.slider .slider-buttons {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 5%;
+  height: 8vh;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+}
+
+.slider .slider-buttons ion-icon {
+  font-size: 2rem;
+  color: #8B7B55;
+}
+
+.slider .slider-buttons:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.slider #goLeft {
+  left: 0;
+}
+
+.slider #goRight {
+  right: 0;
+}
+
+.AccomodationSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.AccomodationSlider .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.AccomodationSlider .row .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AccomodationSlider .row .col img {
+  width: 60%;
+}
+
+.AccomodationSlider .row .left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.AccomodationSlider .row .right {
+  width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 15%;
+  background: #fff;
+}
+
+.AccomodationSlider .row .right .details {
+  width: 90%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.AccomodationSlider .row .right .details p {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  color: #333;
+}
+
+.AccomodationSlider .row .right .details span {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+}
+
+.AccomodationSlider .row .right .details .underline {
+  width: 100px;
+  margin-bottom: 5%;
+  border-bottom: 2px solid #8B7B55;
+}
+
+.AccomodationSlider .row .right .details .btn-group {
+  width: 80%;
+  margin: 2% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.AccomodationSlider .row .right .details .btn-group button {
+  margin: 2% 0;
+  margin-left: 10%;
+  padding: 3% 5%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.AccomodationSlider .row .right .details .btn-group button:hover {
+  background: #222;
+  color: #fff;
+}
+
+.AccomodationSlider .row .right .controll-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.AccomodationSlider .row .right .controll-btn button {
+  width: 60px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  z-index: 20;
+}
+
+.AccomodationSlider .row .right .controll-btn button ion-icon {
+  font-size: 26px;
+  color: #8B7B55;
+  background: transparent;
+  z-index: 19;
+}
+
+.AccomodationSlider .row .right .controll-btn button:hover {
+  background: rgba(34, 34, 34, 0.2);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.roomCatalouge {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.7)));
+  background: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.7));
+  position: fixed;
+  top: 0;
+  z-index: 999990;
+}
+
+.roomCatalouge-content {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  overflow: auto;
+}
+
+.roomCatalouge-content-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.roomCatalouge-content-header .icon {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.roomCatalouge-content-header .icon ion-icon {
+  font-size: 20px;
+  color: #8B7B55;
+}
+
+.roomCatalouge-content-header .title {
+  color: #8B7B55;
+}
+
+.roomCatalouge-content-header .title p {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.roomCatalouge-content-body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.roomCatalouge-content-body .AccomodationSlider {
+  margin: 1% auto;
+}
+
+.ReservationForm .booking {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ReservationForm .booking .column {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  flex-direction: column;
+  margin: 0 1%;
+}
+
+.ReservationForm .booking .column .form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.ReservationForm .booking .column .form p {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8B7B55;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #555;
+}
+
+.ReservationForm .booking .column .form form {
+  width: 100%;
+}
+
+.ReservationForm .booking .column .form .fields {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.ReservationForm .booking .column .form .fields label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Libre Franklin", sans-serif;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.ReservationForm .booking .column .form .fields input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+}
+
+.ReservationForm .booking .column .form .fields input[type=checkbox]:checked::before {
+  background: #8B7B55;
+}
+
+.ReservationForm .booking .column .form .fields input, .ReservationForm .booking .column .form .fields select {
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 2%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+  border-color: rgba(85, 85, 85, 0.3);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.ReservationForm .booking .column .form .fields input option, .ReservationForm .booking .column .form .fields select option {
+  margin: 1% auto;
+}
+
+.ReservationForm .booking .column .form .fields input:hover, .ReservationForm .booking .column .form .fields select:hover {
+  -webkit-box-shadow: 0 1px 0px 0.1px #8B7B55;
+          box-shadow: 0 1px 0px 0.1px #8B7B55;
+}
+
+.ReservationForm .booking .column .form .fields input:focus-within, .ReservationForm .booking .column .form .fields select:focus-within {
+  border-color: #a69571;
+}
+
+.ReservationForm .booking .column .form .fields button {
+  border-radius: 0;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 2%;
+  padding: 1vh 2vw;
+  border: 1px solid #555;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.ReservationForm .booking .column .form .check {
+  height: 30px;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ReservationForm .booking .column .form .check label {
+  margin: auto;
+  margin-left: 3%;
+}
+
+.ReservationForm .booking .column .form .radio span {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.ReservationForm .booking .column .form .radio-buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ReservationForm .booking .column .form .radio-buttons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1% 2%;
+}
+
+.ReservationForm .booking .column .form .radio-buttons .button input[type=radio] {
+  width: 20px;
+  height: 20px;
+}
+
+.ReservationForm .booking .column .form .radio-buttons .button label {
+  margin-left: 2%;
+}
+
+.err_page {
+  width: 100%;
+  height: 80%;
+  margin: 4% auto;
+  background: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.err_page .err_page_left {
+  width: 100%;
+}
+
+.err_page .err_page_left img {
+  width: 600px;
+  height: 500px;
+}
+
+.err_page .err_page_right {
+  width: 100%;
+}
+
+.err_page .err_page_right h1 {
+  font-size: 150px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  color: #8B7B55;
+}
+
+.err_page .err_page_right h4 {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #6400ff;
+}
+
+.err_page .err_page_right p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: #737373;
+}
+
+.err_page .err_page_right .err_btn {
+  margin-top: 2%;
+  background: #fff;
+  border: 2px solid #6400ff;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 13pt;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.err_page .err_page_right .err_btn:hover {
+  background: #6400ff;
+  -webkit-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .err_page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .err_page .err_page_left img {
+    width: 250px;
+    height: auto;
+  }
+  .err_page .err_page_right h4 {
+    margin: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: default;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.ant-modal {
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.ant-modal .ant-modal-content {
+  width: 100% !important;
+  margin: 0 !important;
+  height: 100vh !important;
+  padding: 0 !important;
+}
+
+.ant-modal .ant-modal-content .ant-modal-footer {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BCBCBC;
+  border-radius: 50px;
+}
+
+.scroll {
+  background: white;
+  -webkit-box-shadow: 0 1px 30px 0.1px rgba(34, 34, 34, 0.3);
+          box-shadow: 0 1px 30px 0.1px rgba(34, 34, 34, 0.3);
+}
+
+.scroll .col .incol ion-icon {
+  color: #333;
+}
+
+.scroll .col .navlink {
+  color: #333;
+}
+
+.scroll .col .navlink .links p {
+  color: #333;
+}
+
+.navrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navrow .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+.navrow .col .incol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10%;
+  height: 100%;
+}
+
+.navrow .col .incol ion-icon {
+  font-size: 25px;
+  padding-right: 20px;
+}
+
+.navrow .col .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navrow .col .logo img {
+  width: 150px;
+  height: 50px;
+}
+
+.navrow .col .navlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-right: 10%;
+}
+
+.navrow .col .navlink .links {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  letter-spacing: 2px;
+}
+
+.navrow .col .navlink .links button {
+  background: transparent;
+  border: none;
+  width: 80px;
+  color: #fff;
+}
+
+.navrow .col .navlink .links button:hover {
+  background: transparent;
+  border: none;
+  width: 80px;
+}
+
+.navrow .col .navlink .links p {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  margin-left: 30px;
+  padding-left: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navrow .col .navlink .links p:hover {
+  text-decoration: underline;
+}
+
+.navrow .col .navlink .links .navbtn {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  width: 100%;
+  margin: 0 30px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  letter-spacing: 2px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.navrow .col .navlink .links .navbtn:hover {
+  color: #fff;
+  background: #555;
+  text-decoration: none;
+}
+
+.homeBody {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.footer .footerhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+  height: 10px;
+  margin-bottom: 5px;
+}
+
+.footer .footerhead p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.footer .footerhead p:hover {
+  color: #8B7B55;
+}
+
+.footer .footericon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  margin-top: 5px;
+}
+
+.footer .footericon ion-icon {
+  font-size: 30px;
+  color: #8B7B55;
+  cursor: pointer;
+  border: 1px solid #8B7B55;
+  border-radius: 50px;
+  padding: 5px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.footer .footericon ion-icon:hover {
+  color: #333;
+}
+
+.footer .footercontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer .footercontent .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin: 5px 0;
+}
+
+.footer .footercontent .contentitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer .footercontent .contentitem p {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.footer .footercontent .contentitem p:hover {
+  color: #8B7B55;
+}
+/*# sourceMappingURL=main.css.map */

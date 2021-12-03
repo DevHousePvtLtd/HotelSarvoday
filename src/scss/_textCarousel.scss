@@ -1,0 +1,41 @@
+.text-carousel{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    background: color(lightmode);
+    width: 70%;
+    margin: 3% 0;
+    .text-title{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 40%;
+        // background-color: rebeccapurple;
+        p{
+            @include fontprop(22px, 800, $heading);
+            color: color(font);
+
+        }
+    }
+    .text-body{
+        width: 70%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        h4{
+            @include fontprop(18px, 800, $heading);
+            color: color(font);
+            margin-bottom: 3%
+        }
+        h6{
+            @include fontprop(16px, 400, $body);
+            color: rgba(color(font), 0.9);
+            margin-bottom: 3%;
+
+        }
+    }
+}

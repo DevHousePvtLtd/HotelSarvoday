@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Nunito+Sans&family=Poppins&display=swap');
+
+$heading: 'Nunito Sans', sans-serif;
+$body: 'Libre Franklin', sans-serif;
+$font: 'Poppins', sans-serif;
+
+
+
+$color: (
+    primary: #8B7B55,
+    accent: #4A4A4A,
+    accent1: #BCBCBC,
+    font: #333,
+    button1: #A69571,
+    button2: #555,
+    lightmode: #fff,
+    darkmode: #222,
+
+
+  );
+
+@function color($colorName) {
+  @return map-get($color, $colorName);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// for icons
+
+// @import url('https://css.gg/css');
+// @import url('https://fonts.googleapis.com/css2?family=Material+Icons');

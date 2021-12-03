@@ -1,0 +1,312 @@
+@import "pallate";
+@import "menu";
+@import "carousel";
+@import "galleryPage";
+@import "video";
+@import "Booking";
+@import "textCarousel";
+@import "modalcarousel";
+@import "accomodationslider";
+@import "RoomCatalouge";
+@import "ReservationForm";
+@import "errorPage";
+
+
+
+// all mixins
+
+@mixin fontprop($size,$weight,$family){
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+
+//general styles 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+ul li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+body{
+  background: color(bg);
+  width: 100%;
+}
+// #gallary-Modal{
+//     position:fixed !important;
+//     top: 0;
+//     width: 100%;
+//     height: 100vh;
+// }
+
+.ant-modal{
+    width: 100% !important;
+    height: 100vh !important;
+    .ant-modal-content{
+        width: 100% !important;
+        margin: 0 !important;
+        height: 100vh !important;
+        padding: 0 !important;
+        .ant-modal-footer{
+            display: none !important;
+           
+        }
+    }
+}
+
+//Custon ScrollBar
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb{
+    background: color(accent1);
+    border-radius: 50px;
+}
+//ScrollBar End 
+
+
+// NavBar Top SCSS
+.scroll{
+  background:white;
+  
+  box-shadow: 0 1px 30px .1px rgba(color(darkmode), 0.3);
+    .col {
+        .incol{
+            ion-icon{
+                color: color(font);
+            }
+        }
+        .navlink{
+            color: color(font);
+            .links p{
+                color: color(font);
+            }
+        }
+    }
+
+
+}
+.navrow{
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  flex-direction: row;
+  overflow: hidden;
+  color : color(lightmode);
+  transition: 0.5s;
+
+  .col{
+      flex: 1;
+      height: 100%;
+      
+      .incol{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-left: 10%;
+          height: 100%;
+          ion-icon{
+              font-size: 25px;
+              padding-right: 20px;
+          }
+      }
+      .logo{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          img{
+              width: 150px;
+              height: 50px;
+          }
+      }
+      .navlink{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          margin-right: 10%;
+          .links{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-end;
+              letter-spacing: 2px;
+              button{
+                  background: transparent;
+                  border: none;
+                  width: 80px;
+                  color: color(lightmode);
+                  &:hover{
+                      background: transparent;
+                    border: none;
+                    width: 80px;
+                  }
+              }
+              p{
+                  @include fontprop(12px, 600 , $body );
+                  margin-left: 30px;
+                  padding-left: 8px;
+                  text-decoration: none;
+                  cursor: pointer;
+                  &:hover{
+                      text-decoration: underline;
+                  }
+              }
+              .navbtn{
+                  @include fontprop(12px, 600 , $body );
+                  width: 100%;
+                  margin: 0 30px;
+                  text-align: center;
+                  box-sizing: border-box;
+                  border-radius: 5px;
+                  padding: 10px;
+                  letter-spacing: 2px;
+                  background: transparent;
+                  cursor: pointer;
+                  transition: 0.8s;
+                  &:hover{
+                      color: color(lightmode);
+                      background: color(button2);
+                      text-decoration: none;
+                  }
+              }
+          }
+      }
+  }
+}
+
+//NavBar SCSS ends Here
+
+.homeBody{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // padding: 30px 15px;
+}
+
+
+
+
+
+
+//Footer SCSS start here
+
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  overflow: hidden;
+
+  .footerhead{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 40%;
+      height: 10px;
+      margin-bottom: 5px;
+      p{
+          
+          @include fontprop(16px, 400 ,$font );
+          color: color(font);
+          transition: 0.8s;
+          cursor: pointer;
+          &:hover{
+              color: color(primary);
+          }
+      }
+  }
+  .footericon{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 20%;
+      margin-top: 5px;
+      
+
+      ion-icon{
+          font-size: 30px;
+          color: color(primary);
+          cursor: pointer;
+          border: 1px solid color(primary);
+          border-radius: 50px;
+          padding: 5px;
+          transition: 0.8s;
+          &:hover{
+              color: color(font);
+          }
+      }
+  }
+  .footercontent{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      margin-top: 5px;    
+      margin-bottom: 5px;
+      .content{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include fontprop(16px, 400 , $font );
+          margin: 5px 0;
+      }
+
+      .contentitem{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          @include fontprop(14px, 400 , $font );
+          p{
+              transition: 0.8s;
+          }
+          p:hover{
+              color: color(primary);
+          }
+
+      }
+  }
+}
+
+//Footer SCSS Ends Here
